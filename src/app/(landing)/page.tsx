@@ -1,8 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import designExample1Image from "@/assets/images/design-example-1.png"
-import designExample2Image from "@/assets/images/design-example-2.png"
+
 import Image from "next/image";
 import Pointer from "@/components/pointer";
 import quantumLoo from "@/assets/images/quantum.svg"
@@ -18,7 +17,7 @@ import figmaIcon from "@/assets/images/figma-logo.svg"
 import IntegrationColumn from "@/components/integrationsColumn";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion"
 
 const logos = [
   { name: "Quantum", image: quantumLoo },
@@ -105,12 +104,7 @@ export default function Home() {
 
         <div className="container relative mx-auto ">
 
-          {/* <div className="absolute  -left-32 top-16 hidden lg:block">
-            <Image src={designExample1Image} alt="design exemple 1" />
-          </div> */}
-          {/* <div className="absolute  -right-32 -top-16 hidden lg:block ">
-            <Image src={designExample2Image} alt="design exemple 2" />
-          </div> */}
+      
 
           <div className="absolute left-56 top-96 hidden lg:block">
             <Pointer name="Dev.scott" />

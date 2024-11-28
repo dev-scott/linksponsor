@@ -20,9 +20,9 @@ const Footer = () => {
                     </div>
                     <div>
                         <nav className='flex gap-6'>
-                            {footerLinks.map((link) => (
+                            {footerLinks.map((link,id) => (
 
-                                <a href={link.href} className='text-white/50 text-sm'>{link.label}</a>
+                                <a href={link.href} key={id} className='text-white/50 text-sm'>{link.label}</a>
                             ))}
                         </nav>
                     </div>
