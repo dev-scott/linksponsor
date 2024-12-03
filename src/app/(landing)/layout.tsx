@@ -1,17 +1,17 @@
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 
- const Layout = ({children}:{children:React.ReactNode})=>{
+const Layout = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <div className="">
-             <Navbar />
-<div className="px-6 ">
+            <Navbar />
+            <div className="px-6 ">
 
-            {children}
-</div>
+                {children}
+            </div>
 
-            <Footer/>
+            <Footer />
         </div>
     )
 }

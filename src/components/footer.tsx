@@ -11,7 +11,7 @@ const footerLinks = [
 
 const Footer = () => {
     return (
-        <footer className='py-16'>
+        <footer className=''>
             <div className='container mx-auto'>
 
                 <div className='flex flex-col md:flex-row md:justify-between  items-center gap-6'>
@@ -20,9 +20,9 @@ const Footer = () => {
                     </div>
                     <div>
                         <nav className='flex gap-6'>
-                            {footerLinks.map((link,id) => (
+                            {footerLinks.map((link, id) => (
 
-                                <a href={link.href} key={id} className='text-white/50 text-sm'>{link.label}</a>
+                                <a href={link.href} key={id} className='text-foreground/50 text-sm'>{link.label}</a>
                             ))}
                         </nav>
                     </div>

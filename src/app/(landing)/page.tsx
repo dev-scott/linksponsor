@@ -117,21 +117,21 @@ export default function Home() {
 
           <div className="flex justify-center">
 
-            <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full text-neutral-950 font-semibold">
+            <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full text-foreground font-semibold">
               $7.5M seed round raised
 
             </div>
           </div>
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6 text-foreground">
             Impactful desing , created effortlessly
           </h1>
-          <p className="mx-auto text-xl text-white/50 mt-5 max-w-2xl">
+          <p className="mx-auto text-xl text-foreground/50 mt-5 max-w-2xl">
             Design tools shouldn&apos;'t slow you down . Layers combines powerful features with an intuitive interface that keeps you in your creative flow.
 
           </p>
-          <form className="flex border border-white/15 rounded-full p-2 mt-8 mx-auto max-w-lg">
-            <input type="email" placeholder="Enter your email" className="bg-transparent px-4 flex-1 w-full" />
+          <form className="flex border border-input rounded-full p-2 mt-8 mx-auto max-w-lg">
+            <input type="email" placeholder="Enter your email" className=" text-foreground border-none outline-none bg-transparent px-4 flex-1 w-full" />
             <Button variant="default" size={"sm"} type="submit" className="whitespace-nowrap rounded-full text-neutral-950">Sign up</Button>
           </form>
         </div>
@@ -140,7 +140,7 @@ export default function Home() {
       <section className="py-24 overflow-x-clip">
 
         <div className="container mx-auto">
-          <h3 className="text-center text-white/50 text-xl">
+          <h3 className="text-center text-foreground text-xl">
             Already chosen by these market leaders
           </h3>
           <div className=" flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
@@ -157,7 +157,7 @@ export default function Home() {
                 repeat: Infinity
               }}
 
-              className="flex flex-none gap-25  justify-center">
+              className="flex flex-none gap-25  justify-center ">
 
               {Array.from({ length: 2 }).map((_, i) => (
 
@@ -187,10 +187,10 @@ export default function Home() {
               <Tag>Introducing Layer</Tag>
             </div>
             <div className="text-4xl md:text-6xl lg:text-7xl text-center font-medium mt-10">
-              <span className="">Your creative process deserves better.</span>{" "}
-              <span className="text-white/15 ">{textWord.map((word, wordIndex) => (
+              <span className="text-foreground">Your creative process deserves better.</span>{" "}
+              <span className="text-black/15 dark:text-white/15 ">{textWord.map((word, wordIndex) => (
 
-                <span key={wordIndex} className={cn("transition duration-500 text-white/15", wordIndex < currentWord && "text-white",)}>
+                <span key={wordIndex} className={cn("transition duration-500 ", wordIndex < currentWord && "text-foreground",)}>
                   {`${word} `}
                 </span>
 
@@ -206,13 +206,13 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="py-24 ">
+      <section className="py-24 text-foreground ">
         <div className="container mx-auto">
           <div className="flex justify-center">
 
             <Tag>Features</Tag>
           </div>
-          <h2 className="text-6xl font-medium text-center mt-6"> Where power meets <span className="text-primary"> simplicity </span> </h2>
+          <h2 className="text-6xl font-medium text-center mt-6 text-foreground"> Where power meets <span className="text-primary"> simplicity </span> </h2>
 
           <div className="mt-12 grid grid-cols-1  gap-8">
             <FeatureCard title="Real-time Collaboration" description="Work together seanlessly with conflick-free team editing " className="group" >
@@ -277,7 +277,7 @@ export default function Home() {
           </div>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             {features.map((feature) => (
-              <div key={feature} className="bg-neutral-950 hover:scale-95 transition duration-500 group border border-white/10 inline-flex px-3 py-1.5 rounded-2xl gap-3 items-center">
+              <div key={feature} className=" dark:bg-neutral-950 hover:scale-95 transition duration-500 group border border-black/10 dark:border-white/10 inline-flex px-3 py-1.5 rounded-2xl gap-3 items-center">
                 <span className="bg-primary  group-hover:rotate-45 transition duration-500 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-xl">&#10038;</span>
                 <span className="font-medium">{feature}</span>
               </div>
@@ -291,11 +291,11 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 items-center lg:gap-16">
 
-            <div className="">
+            <div className=" text-foreground">
 
               <Tag>Integration</Tag>
               <h2 className="text-6xl font-medium mt-6">Play well with <span className="text-primary"> other </span></h2>
-              <p className="text-white/50 mt-4 text-lg">
+              <p className="text-black/50 dark:text-white/50 mt-4 text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et tempore asperiores aliquid optio architecto commodi facere vel alias sint dignissimos iure dolores maxime id magni reprehenderit beatae cumque, fuga non.
               </p>
             </div>
@@ -312,7 +312,7 @@ export default function Home() {
         </div>
 
       </section>
-      <section className="mt-24">
+      <section className="mt-24 text-foreground">
         <div className="container mx-auto ">
           <div className="flex justify-center">
             <Tag>Faqs</Tag>
@@ -324,7 +324,7 @@ export default function Home() {
 
           <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto">
             {faqs.map((faq, faqIndex) => (
-              <div key={faq.question} className="bg-neutral-900 rounded-2xl border border-white/10 p-6 " >
+              <div key={faq.question} className="bg-background rounded-2xl border border-foreground/10 p-6 " >
 
                 <div className="flex justify-between items-center" onClick={() => setSelectedIndexFaq(faqIndex)}>
                   <h3 className="font-medium ">
@@ -346,7 +346,7 @@ export default function Home() {
                       exit={{ height: 0 }}
 
                       className={cn("mt-6 overflow-hidden")}>
-                      <p className="text-white/50">{faq.answer}</p>
+                      <p className="text-foreground/50">{faq.answer}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
