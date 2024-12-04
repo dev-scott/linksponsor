@@ -105,15 +105,16 @@ const Page = () => {
                                     ))}
                                 </div>
                             </div>
+
+
+
                             <div className="mt-4 w-full self-end">
                                 <Button variant={"default"} className="text-background bg-foreground w-full py-6 px-4">
                                     Buy now
                                 </Button>
                             </div>
                         </div>
-
-
-                    ))}
+                        ))}
 
 
 
